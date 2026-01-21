@@ -4,12 +4,12 @@ Ondersteunde AI-platformen: ChatGPT, Claude, Perplexity, Copilot, en meer.
 
 ## installatie
 1. Clone of installeer de repository:
-   ```git clone https://github.com/<jouw-username>/kritikos.git```
+   ```https://github.com/<jouw-username>/KritkosTestRepo.git```
 2. Open je browser.
 3. Ga naar jouw-browser://extensions/.
 4. Schakel Developer mode in.
 5. Klik op Load unpacked en selecteer de map browser-plugin.
-6. Zorg dat het verbonden is met een azure ai foundry
+6. Zorg dat het verbonden is met een azure ai foundry via de endpoint file (Hulp nodig)
 7. Kritikos verschijnt nu in de toolbar en is actief op alle ondersteunde AI-sites.
 
 ## Gebruik
