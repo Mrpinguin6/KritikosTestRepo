@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Kritikos</title>
+    <link rel="stylesheet" href="popup.css"/>
+</head>
+<body>
+<!-- Teaser toont als de URL teaser=1 bevat -->
+<div id="teaser" class="teaser-overlay" hidden>
+    <button class="teaser-overlay__button" id="teaserButton" aria-label="Open Kritikos teaser">
+        <img src="icons/uil.png" alt="" class="teaser-overlay-logo"/>
+        <h2 class="teaser-overlay-title">Wil je reflecteren op je AI gebruik?</h2>
+    </button>
+</div>
+
+<div class="popup">
+    <!-- Header -->
+    <header class="header">
+        <div class="brand">
+            <div class="logo" aria-hidden="true">
+                <img src="icons/uil.png" class="logo-img" alt="" width="18" height="18"/>
+            </div>
+            <h1 class="title">Kritikos</h1>
+        </div>
+
+        <!-- Reset knop rechtsboven voor testdoel einde - reset chatgeschiedenis -->
+        <button class="icon-btn" id="resetBtn" aria-label="Reset chat" title="Reset chat">
+            Nieuwe chat
+        </button>
+    </header>
+
+    <!-- Inhoud -->
+    <main class="content">
+        <section class="row">
+            <div class="card tips">
+                <h2 class="section-title">Tips</h2>
+                <div class="tips-placeholder" aria-hidden="true"></div>
+            </div>
+
+            <div class="card usage">
+                <h2 class="section-title">AI gebruik</h2>
+                <div class="usage-tile">
+                    <div class="usage-head">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.75"/>
+                            <path d="M12 7v6l3 2" stroke="currentColor" stroke-width="1.75" fill="none"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Deze week</span>
+                    </div>
+                    <div class="usage-num" id="usageCount">4 uur</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chat card">
+            <h2 class="section-title">Chat</h2>
+            <div class="chat-list" id="chatList" aria-live="polite">
+                <!-- Bot -->
+                <div class="msg msg-bot">
+                    <div class="msg-avatar" aria-hidden="true">
+                        <img src="icons/uil.png" class="avatar-img" alt="" width="18" height="18"/>
+                    </div>
+                    <div class="bubble">
+                        Dit is de AI-chat die je met mij deelde:
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invoer -->
+            <form class="composer" id="composer" autocomplete="off">
+                <input
+                        id="messageInput"
+                        class="input"
+                        type="text"
+                        placeholder="Type hier"
+                        aria-label="Bericht invoeren"
+                />
+                <button class="send-btn" aria-label="Versturen" title="Versturen">
+                    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                        <path d="M3 11.5l17-8.5-7 18-2-7-8-2.5z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- AI chat invoeroverlay -->
+    <div class="overlay" id="captureModal" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="captureTitle">
+            <h2 id="captureTitle">Plak hier jouw AI-chat</h2>
+            <textarea id="captureText" placeholder="Prompt: [..] + Output: [..]"></textarea>
+            <div class="actions">
+                <button id="captureSubmit" class="primary">Start gesprek met Kritikos</button>
+            </div>
+        </div>
+    </div>
+    <script src="endpoint.js"></script>
+    <script src="popup.js"></script>
+    <script type="module" src="browser-polyfill.min.js"></script>
+</div>
+</body>
+</html>

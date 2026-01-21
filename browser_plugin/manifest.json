@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Kritikos API Prototype",
+  "version": "1.2.0",
+  "description": "Prototype update dinsdag 02 december, Teun: Meerdere soorten AI toegevoegd voor een groter en breeder gebruik grote bug ontdekt dat de extensie niet automatisch kan openen in andere browser dan chrome.",
+  "action": {
+    "default_title": "Kritikos",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://copilot.microsoft.com/*",
+    "https://www.perplexity.ai/*",
+    "https://you.com/*",
+    "https://bard.google.com/*",
+    "https://openassistant.io/*",
+    "https://nat.dev/*",
+    "https://humata.ai/*",
+    "https://character.ai/*"
+  ],
+  "icons": {
+    "16": "icons/uil.png",
+    "32": "icons/uil.png",
+    "48": "icons/uil.png",
+    "128": "icons/uil.png"
+  }
+}
