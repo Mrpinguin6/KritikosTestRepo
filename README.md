@@ -5,7 +5,7 @@ Ondersteunde AI-platformen: ChatGPT, Claude, Perplexity, Copilot, en meer.
 ## installatie
 1. Clone of installeer de repository:
    ```https://github.com/<jouw-username>/KritkosTestRepo.git```
-2. Open je browser.
+2. Open je browser. (chromium based)
 3. Ga naar jouw-browser://extensions/.
 4. Schakel Developer mode in.
 5. Klik op Load unpacked en selecteer de map browser-plugin.
